@@ -8,6 +8,7 @@ q = a or !b
 
 
 from myhdl import *
+from time import sleep
 
 
 @block
@@ -85,6 +86,7 @@ def exe4(led, sw):
 
     @always_comb
     def comb():
+        
         led[0].next = sw[0] and (not sw[1])
 
     return instances()
@@ -102,7 +104,9 @@ def exe5(leds, sw):
 
     @always_comb
     def comb():
-        pass
+        led0 = sw[0]
+        leds[0].next = led0
+        leds[1].next = not led0
 
     return instances()
 
