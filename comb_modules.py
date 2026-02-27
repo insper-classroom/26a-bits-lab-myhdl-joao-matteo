@@ -126,7 +126,7 @@ def sw2hex(hex_pins, sw):
         elif sw[4:0] == 2:
             hex_pins.next = "0100100"
         elif sw[4:0] == 3:
-            hex_pins.next = "0111000"
+            hex_pins.next = "0110000"
         elif sw[4:0] == 4:
             hex_pins.next = "0011001"
         elif sw[4:0] == 5:
